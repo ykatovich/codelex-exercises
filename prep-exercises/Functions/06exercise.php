@@ -8,7 +8,7 @@ $mixedArray = [
     "Codelex"
 ];
 
-function doubleInteger($intValue): int
+function doubleInteger(int $intValue): int
 {
     return pow($intValue, 2);
 }

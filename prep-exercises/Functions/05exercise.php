@@ -25,16 +25,17 @@ $deliveryPrice = [
 ];
 
 
-function ifFruitHasWeightOver10kg($fruits): int
+function ifFruitHasWeightOver10kg($fruits, $delivery): int
 {
-    global $deliveryPrice;
     if ($fruits["weight"] > 10) {
-        return $deliveryPrice["costOver10kg"];
+        return $delivery["costOver10kg"];
     } else {
-        return $deliveryPrice["costUpTo10kg"];
+        return $delivery["costUpTo10kg"];
     }
 }
 
 foreach ($fruits as $value) {
-    echo $value["name"] . "'s delivery price will be " . ifFruitHasWeightOver10kg($value) . " euro" . PHP_EOL;
+    echo $value["name"] . "'s delivery price will be "
+        . ifFruitHasWeightOver10kg($value, $deliveryPrice)
+        . " euro" . PHP_EOL;
 }
