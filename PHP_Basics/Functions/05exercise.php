@@ -30,7 +30,7 @@ function ifFruitHasWeightOver10kg($fruits): int
     global $deliveryPrice;
     if ($fruits["weight"] > 10) {
         return $deliveryPrice["costOver10kg"];
-    } else  {
+    } else {
         return $deliveryPrice["costUpTo10kg"];
     }
 }

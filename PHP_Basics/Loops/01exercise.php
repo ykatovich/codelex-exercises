@@ -11,6 +11,6 @@ $numArr = [10,
     90,
     100];
 
-foreach($numArr as $item){
-    echo $item.PHP_EOL;
+foreach ($numArr as $item) {
+    echo $item . PHP_EOL;
 }

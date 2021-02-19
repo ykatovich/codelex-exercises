@@ -11,6 +11,6 @@ $numArr = [10,
     90,
     100];
 
-for($i = 0; $i < count($numArr); $i++){
-    echo $numArr[$i].PHP_EOL;
+for ($i = 0; $i < count($numArr); $i++) {
+    echo $numArr[$i] . PHP_EOL;
 }

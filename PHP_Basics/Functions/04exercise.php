@@ -1,5 +1,6 @@
 <?php
 
+
 $mark = new stdClass();
 $mark->name = "Mark";
 $mark->surname = "Tucker";
@@ -21,15 +22,12 @@ $people = [
     $tim
 ];
 
-function isMature($persons): void
+function isMature($people): string
 {
-    foreach($persons as $value) {
-        if ($value->age >= 18) {
-            echo "{$value->name} has reached the age of 18" . PHP_EOL;
-        } else {
-            echo "{$value->name} is not reached" . PHP_EOL;
-        }
-    }
+    return $people->age >= 18;
 }
 
-isMature($people);
+foreach ($people as $person)
+    if (isMature($person)) {
+        echo "$person->name has reached age of 18" . PHP_EOL;
+    }

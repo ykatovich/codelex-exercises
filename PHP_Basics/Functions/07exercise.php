@@ -2,8 +2,8 @@
 
 $customer = new stdClass();
 $customer->name = "Mark";
-$customer->license = "A";
-$customer->cash = 500;
+$customer->license = "B";
+$customer->cash = 580;
 
 $beretta = new stdClass();
 $beretta->name = "USP";
@@ -28,9 +28,10 @@ $weapons = [
 
 $licenses = array_column($weapons, "license");
 $prices = array_column($weapons, "price");
+$names = array_column($weapons, "name");
 
 for ($i = 0; $i < count($licenses); $i++) {
     if ($customer->license === $licenses[$i] && $customer->cash >= $prices[$i]) {
-        echo "{$customer->name} can buy {$licenses[$i]} licenses weapon";
+        echo "{$customer->name} can buy ({$names[$i]}) {$licenses[$i]} licenses weapon";
     }
 }
