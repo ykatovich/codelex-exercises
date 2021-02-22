@@ -10,7 +10,7 @@ $listOfWords = [
 
 $numberOfLives = 7;
 $missesLetters = [];
-$mysticalWord = str_split($listOfWords[rand(0, 1)]);
+$mysticalWord = str_split($listOfWords[rand(0, count($listOfWords) - 1)]);
 $word = array_fill(0, count($mysticalWord), "_");
 
 
