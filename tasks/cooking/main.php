@@ -13,6 +13,42 @@ $recipes->addRecipe(new Recipe("Ratatouille", ["paprika", "eggplant", "zucchini"
 $ingredients = new Ingredient();
 $ingredients->addIngredient();
 echo PHP_EOL;
-$recipes->canCook($ingredients);
+
+foreach ($recipes->getRecipes() as $recipeNames) {
+    foreach ($recipeNames->getRecipeIngredients() as $value) {
+        if (in_array($value, $ingredients->getIngredients())) {
+            echo $value . " for " . $recipeNames->getRecipeName() . PHP_EOL;
+        }
+    }
+}
 echo PHP_EOL;
-$recipes->ingredientsNeed($ingredients);
+
+foreach ($recipes->getRecipes() as $recipeNames) {
+    echo "For '" . $recipeNames->getRecipeName() . "' need ";
+    foreach ($recipeNames->getRecipeIngredients() as $value) {
+        if (!in_array($value, $ingredients->getIngredients())) {
+            echo $value . " ";
+        }
+    }
+    echo PHP_EOL;
+}
+
+
+
+
+
+
+
+
+
+
+/*foreach($ingredients->getIngredients() as $value ){
+    echo $value." ";
+}
+echo PHP_EOL;
+foreach($recipes->getRecipes() as $recipeNames){
+    foreach ($recipeNames->getRecipeIngredients() as $value){
+        echo $value." ";
+    };
+
+}*/
