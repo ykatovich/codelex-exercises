@@ -9,9 +9,15 @@ $recipes = new RecipeCollection();
 $recipes->addRecipe(new Recipe("Salad X", ["onion", "mayonnaise", "chicken"]));
 $recipes->addRecipe(new Recipe("Bouillabaisse", ["fish", "tomato", "wine", "oil"]));
 $recipes->addRecipe(new Recipe("Ratatouille", ["paprika", "eggplant", "zucchini"]));
-
 $ingredients = new Ingredient();
-$ingredients->addIngredient();
+
+$ingredientsNumber = readline("Input a number of ingredients: ");
+while ($ingredientsNumber != 0) {
+    $ingredient = readline("Input an ingredient: ");
+    $ingredients->addIngredient($ingredient);
+    $ingredientsNumber--;
+}
+
 echo PHP_EOL;
 
 foreach ($recipes->getRecipes() as $recipeNames) {

@@ -5,13 +5,9 @@ class Ingredient
 
     private array $ingredients = [];
 
-    public function addIngredient(): void
+    public function addIngredient(string $ingredient): void
     {
-        $ingredientsNumber = readline("Input a number of ingredients: ");
-        while ($ingredientsNumber != 0) {
-            array_push($this->ingredients, readline("Input ingredient: "));
-            $ingredientsNumber--;
-        }
+        array_push($this->ingredients, $ingredient);
     }
 
     public function getIngredients(): array
