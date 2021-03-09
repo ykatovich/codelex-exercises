@@ -32,23 +32,3 @@ foreach ($recipes->getRecipes() as $recipeNames) {
     }
     echo PHP_EOL;
 }
-
-
-
-
-
-
-
-
-
-
-/*foreach($ingredients->getIngredients() as $value ){
-    echo $value." ";
-}
-echo PHP_EOL;
-foreach($recipes->getRecipes() as $recipeNames){
-    foreach ($recipeNames->getRecipeIngredients() as $value){
-        echo $value." ";
-    };
-
-}*/
